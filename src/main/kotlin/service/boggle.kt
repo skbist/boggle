@@ -37,7 +37,7 @@ class Boggle(count: Int) {
 
     fun wordfinder(boardData: Array<CharArray>): Set<String> {
         val root = TrieNod()
-        var dictionary: List<String> = mutableListOf()
+        var dictionary: List<String>
         dictionary = File(DICTIONARY_FILE_PATH).readLines()
         for (word in dictionary) {
             insert(root, word)
