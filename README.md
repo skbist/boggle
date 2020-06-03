@@ -32,21 +32,25 @@ must have IDE any ide having java support/or use terminal to build project
 
 #### 2.1.For Backend (**java and kotlin needed):
 go to boggle
-#####build 
+
+##### Build 
 ```
 gradlew build
 ```
-#####Run
+
+##### Run
 run main function present in main.kt
 
 
 #### 2.2 For boggle-ui (**node and npm needed):
 go to boggle/src/main/resources/boggle-ui/
-######Build
+
+###### Build
 ```
  npm install
  ```
-######Run
+ 
+###### Run
 
 ```
  npm start
