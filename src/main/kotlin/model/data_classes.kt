@@ -1,6 +1,7 @@
 package model
 
 data class ValidationResponse(var words: List<String>)
+
 data class ReqData(val name: String, val wordList: Array<String>?, val gameSize: Int) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -23,6 +24,7 @@ data class ReqData(val name: String, val wordList: Array<String>?, val gameSize:
 }
 
 data class Score(val gameType: GameType, val score: Int, val player: String, val words: String?)
+
 enum class GameType {
     FOUR_SQUARE,
     FIVE_SQUARE

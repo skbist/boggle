@@ -1,5 +1,6 @@
 package service
 
+import boggle.Boggle
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
@@ -18,7 +19,7 @@ internal class BoggleTest {
             charArrayOf('a', 'q', 'v', 'b')
         )
         val boggle = Boggle(4)
-        assertEquals(2,boggle.wordfinder(data).size ,"should contain only one word")
+        assertEquals(2,boggle.findWords(data).size ,"should contain only one word")
 
     }
 
@@ -31,7 +32,7 @@ internal class BoggleTest {
             charArrayOf('j', 'b', 'e', 't')
         )
         val boggle = Boggle(4)
-        assertEquals(32,boggle.wordfinder(data).size ,"should contain only one word")
+        assertEquals(32,boggle.findWords(data).size ,"should contain multiple one word")
     }
 
     @Test
@@ -43,7 +44,7 @@ internal class BoggleTest {
             charArrayOf('u', 'r', 'm', 'j')
         )
         val boggle = Boggle(4)
-        assertEquals(0,boggle.wordfinder(data).size ,"should contain only one word")
+        assertEquals(0,boggle.findWords(data).size ,"does not contain Word")
     }
 
 
@@ -56,6 +57,6 @@ internal class BoggleTest {
             charArrayOf('u', 'r', 'm', 'j')
         )
         val boggle = Boggle(4)
-        Assertions.assertThrows(IllegalArgumentException::class.java) { boggle.wordfinder(data) }
+        Assertions.assertThrows(IllegalArgumentException::class.java) { boggle.findWords(data) }
     }
 }
