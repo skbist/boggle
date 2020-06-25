@@ -1,0 +1,49 @@
+.board {
+    display: block;
+    width: auto;
+
+}
+
+.board .board-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.board .board-row:last-child .board-cell {
+   border-bottom: 1px solid;
+}
+
+.board .board-row .board-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-top:1px solid;
+    border-left:1px solid ;
+
+
+}
+
+.board .board-row .board-cell:last-child {
+    border-right: 1px solid;
+}
+
+
+.board .board-row .board-cell .board-cell-content {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 12pt;
+    font-weight: 100;
+}
+
+.timerText {
+    color: #000000;
+    font-size: 12pt;
+}
+
+.timerWarning {
+    color: #FF0000;
+    font-size: 16pt;
+}

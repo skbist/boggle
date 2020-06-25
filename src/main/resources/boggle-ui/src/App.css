@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  align-content: center;
+}
+.root {
+  min-width: 275px;
+  max-width:800px;
+  margin-right:12px;
+  margin-left:12px;
+}
+/*.bullet {*/
+/*  display: 'inline-block',*/
+/*  margin: '0 2px';*/
+/*  transform: 'scale(0.8)',*/
+/*}*/
+.title{
+  font-size: 14px;
+}
+.description{
+  padding: 12px;
+  justify-content:space-between ;
+}
+.playbtn{
+  display: block !important;
+  margin-top: 15px;
+  margin: auto !important;
+}
+.pos {
+  margin-bottom: 12px;
+}
+
