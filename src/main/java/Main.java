@@ -77,10 +77,11 @@ class TicTacToe {
         String[] coordinateIndexes = line.split(",");
         if (coordinateIndexes.length > 1) {
             try {
-                int xCoordinate = Integer.parseInt(coordinateIndexes[0]);
-                int yCoordinate = Integer.parseInt(coordinateIndexes[1]);
-                if (xCoordinate < 3 && yCoordinate < 3 && board[xCoordinate][yCoordinate] == 'N') {
-                    board[xCoordinate][yCoordinate] = currentPlayer;
+                int x = Integer.parseInt(coordinateIndexes[0]);
+                int y = Integer.parseInt(coordinateIndexes[1]);
+
+                if ((x > -1 && x < 3) && (y > -1 && y < 3) && board[x][y] == 'N') {
+                    board[x][y] = currentPlayer;
                     return true;
                 }
             } catch (NumberFormatException e) {
