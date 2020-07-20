@@ -76,12 +76,17 @@ class TicTacToe {
         if (TicTacToe.isEpmtyString(line)) return false;
         String[] coordinateIndexes = line.split(",");
         if (coordinateIndexes.length > 1) {
-            int xCoordinate = Integer.parseInt(coordinateIndexes[0]);
-            int yCoordinate = Integer.parseInt(coordinateIndexes[1]);
-            if (xCoordinate < 3 && yCoordinate < 3 && board[xCoordinate][yCoordinate] == 'N') {
-                board[xCoordinate][yCoordinate] = currentPlayer;
-                return true;
+            try {
+                int xCoordinate = Integer.parseInt(coordinateIndexes[0]);
+                int yCoordinate = Integer.parseInt(coordinateIndexes[1]);
+                if (xCoordinate < 3 && yCoordinate < 3 && board[xCoordinate][yCoordinate] == 'N') {
+                    board[xCoordinate][yCoordinate] = currentPlayer;
+                    return true;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("only numbers are allowed for the coordinates");
             }
+
         }
         return false;
     }
